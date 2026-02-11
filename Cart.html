@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from nexussecure.shop/Cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:37 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusSecure - Cart</title>
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --ns-gradient: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      --ns-dark: #0f172a;
+      --ns-muted: #4b5563;
+      --ns-border: #e5e7eb;
+      --ns-bg-soft: #f9fafb;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 1.5rem 4rem; /* fixed navbar ke niche spacing */
+    }
+
+    .cart-page-title {
+      margin-bottom: 1.8rem;
+      text-align: left;
+    }
+
+    .cart-page-title h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--ns-dark);
+    }
+
+    .cart-page-title p {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--ns-muted);
+    }
+
+    .cart-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .cart-items {
+      flex: 1.7;
+      min-width: 260px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.4rem 1.2rem;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .cart-items-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .cart-items-header span {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 0.75rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      align-items: center;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .cart-item-info {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+
+    .cart-item-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    /* IMAGE THUMBNAIL IN CART */
+    .cart-item-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cart-item-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cart-item-text h4 {
+      margin: 0 0 0.25rem;
+      font-size: 0.95rem;
+      color: #111827;
+      font-weight: 600;
+    }
+
+    .cart-item-text p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
+    .cart-item-price,
+    .cart-item-subtotal {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #111827;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .cart-item-qty {
+      text-align: center;
+    }
+
+    .cart-item-qty input {
+      width: 60px;
+      text-align: center;
+      padding: 0.3rem 0.2rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f9fafb;
+    }
+
+    .cart-item-qty input:focus {
+      border-color: #4ecdc4;
+      background: #ffffff;
+    }
+
+    .cart-remove {
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: #ef4444;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .cart-remove:hover {
+      text-decoration: underline;
+    }
+
+    /* Summary box */
+
+    .cart-summary {
+      flex: 1;
+      min-width: 260px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.4rem;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .cart-summary h2 {
+      margin: 0 0 1.2rem;
+      font-size: 1.15rem;
+      color: #111827;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+      color: #374151;
+    }
+
+    .summary-row.total {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      padding-top: 0.6rem;
+      border-top: 1px dashed #d4d4d8;
+    }
+
+    .summary-row span:last-child {
+      font-weight: 600;
+    }
+
+    .summary-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: #ecfdf5;
+      color: #166534;
+      margin-bottom: 0.9rem;
+    }
+
+    .summary-badge i {
+      font-size: 0.85rem;
+    }
+
+    .btn-checkout {
+      width: 100%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0.75rem 1.9rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      background-image: var(--ns-gradient);
+      box-shadow: 0 12px 28px rgba(248, 113, 113, 0.55);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      margin-top: 0.9rem;
+    }
+
+    .btn-checkout:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px rgba(248, 113, 113, 0.7);
+      opacity: 0.96;
+    }
+
+    .cart-secondary-actions {
+      margin-top: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+      flex-wrap: wrap;
+    }
+
+    .cart-secondary-actions a {
+      color: #0ea5e9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .cart-secondary-actions a:hover {
+      text-decoration: underline;
+    }
+
+    .cart-security {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+    }
+
+    .cart-security i {
+      color: #22c55e;
+    }
+
+    /* Empty cart state */
+    .cart-empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #6b7280;
+    }
+
+    .cart-empty h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+
+    .cart-empty p {
+      margin: 0 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      padding: 0.55rem 1.4rem;
+      font-size: 0.88rem;
+      color: #111827;
+      text-decoration: none;
+      background: #f9fafb;
+    }
+
+    .btn-outline:hover {
+      background: #f3f4f6;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 95px 1.2rem 3rem;
+      }
+
+      .cart-item {
+        grid-template-columns: 1fr 80px;
+        grid-template-rows: auto auto;
+        row-gap: 0.4rem;
+      }
+
+      .cart-item-price {
+        text-align: left;
+      }
+
+      .cart-item-qty {
+        text-align: left;
+      }
+
+      .cart-item-subtotal {
+        text-align: right;
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/Logo.png" alt="">
+        NexusSecure
+      </div>
+
+      <!-- LEFT: nav links (collapsible on mobile) -->
+      <div class="nav-left" id="navLinks">
+        <ul class="nav-links">
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+        <!-- RIGHT icons -->
+        <div class="nav-right">
+          <a href="Cart.html" class="icon-btn" title="Cart">🛒</a>
+          <a href="Account.html" class="icon-btn" title="Account">👤</a>
+        </div>
+      </div>
+
+      <!-- HAMBURGER BUTTON (mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="cart-page-title">
+      <h1>Your Cart</h1>
+      <p>Review your selected security products before proceeding to secure checkout.</p>
+    </div>
+
+    <div class="cart-layout">
+      <!-- LEFT – Cart Items -->
+      <div class="cart-items">
+        <div class="cart-items-header">
+          <span>Products in your cart</span>
+          <span>Secure digital delivery</span>
+        </div>
+
+        <!-- Empty state -->
+        <div id="cartEmptyState" class="cart-empty" style="display:none;">
+          <h2>Your cart is empty</h2>
+          <p>Add a security product to your cart to get started.</p>
+          <a href="Shop.html" class="btn-outline">Browse products</a>
+        </div>
+
+        <!-- JS yahan items inject karega -->
+        <div id="cartItemsContainer"></div>
+      </div>
+
+      <!-- RIGHT – Summary -->
+      <div class="cart-summary">
+        <div class="summary-badge">
+          <i class="fas fa-lock"></i>
+          Encrypted & Secure Checkout
+        </div>
+
+        <h2>Order Summary</h2>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Taxes & Fees</span>
+          <span>Calculated at checkout</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery</span>
+          <span>Instant email delivery</span>
+        </div>
+
+        <div class="summary-row total">
+          <span>Estimated total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+
+        <button class="btn-checkout" type="button" id="checkoutBtn">
+          Proceed to Secure Checkout
+        </button>
+
+        <div class="cart-secondary-actions">
+          <a href="Shop.html">← Continue shopping</a>
+          <span>Licenses will be sent to your registered email.</span>
+        </div>
+
+        <div class="cart-security">
+          <i class="fas fa-shield-check"></i>
+          <span>Payments processed via trusted encrypted gateways.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <!-- 1: NexusSecure Reviews -->
+      <div class="footer-section">
+        <h3>NexusSecure</h3>
+       
+        <p>Email Us: info@NexusSecure.shop</p>
+        <p>
+          NexusSecure delivers battle-tested analysis of antivirus, VPN, and endpoint protection solutions.
+          Our insights are powered by rigorous real-world threat emulation, performance benchmarks, and unbiased expert evaluation —
+          giving you clarity to protect your digital world with confidence.
+        </p>
+      </div>
+
+      <!-- 2: Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 3: Our Policies -->
+      <div class="footer-section">
+        <h3>Our Policies</h3>
+        <ul>
+          <li><a href="Terms.html">Terms & Conditions</a></li>
+          <li><a href="Refund.html">Refund & Return Policy</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Shopping.html">Shopping Policy</a></li>
+          <li><a href="Payment.html">Payment Policy</a></li>
+          <li><a href="Cookie.html">Cookie Policy</a></li>
+          <li><a href="Shipping.html">Shipping/Delivery Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NexusSecure. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SMALL JS FOR MOBILE MENU -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <!-- CART LOGIC -->
+  <script>
+    const STORAGE_KEY = 'NexusSecure_cart';
+
+    function getCart() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      renderCartPage();
+
+      // header/cart amount update ke liye (agar kahi use kar rahe ho)
+      if (window.NexusSecure && typeof window.NexusSecure.updateCart === 'function') {
+        window.NexusSecure.updateCart();
+      }
+    }
+
+    function formatMoney(v) {
+      return '$' + Number(v).toFixed(2);
+    }
+
+    function renderCartPage() {
+      const cart = getCart();
+      const container = document.getElementById('cartItemsContainer');
+      const emptyState = document.getElementById('cartEmptyState');
+      const subtotalEl = document.getElementById('cartSubtotal');
+      const totalEl = document.getElementById('cartTotal');
+
+      if (!container) return;
+
+      container.innerHTML = '';
+
+      if (!cart.length) {
+        if (emptyState) emptyState.style.display = 'block';
+        if (subtotalEl) subtotalEl.textContent = '$0.00';
+        if (totalEl) totalEl.textContent = '$0.00';
+        return;
+      }
+
+      if (emptyState) emptyState.style.display = 'none';
+
+      let subtotal = 0;
+
+      cart.forEach(item => {
+        const itemTotal = Number(item.price) * Number(item.qty);
+        subtotal += itemTotal;
+
+        const row = document.createElement('div');
+        row.className = 'cart-item';
+
+        // image ya icon decide karein
+        const imgHtml = item.image
+          ? `
+            <div class="cart-item-thumb">
+              <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}">
+            </div>
+          `
+          : `
+            <div class="cart-item-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+          `;
+
+        row.innerHTML = `
+          <div class="cart-item-info">
+            ${imgHtml}
+            <div class="cart-item-text">
+              <h4>${escapeHtml(item.title)}</h4>
+              <p>Digital license · Instant email delivery</p>
+              <button class="cart-remove" data-id="${escapeHtml(String(item.id))}">Remove</button>
+            </div>
+          </div>
+
+          <div class="cart-item-price">
+            ${formatMoney(item.price)}
+          </div>
+
+          <div class="cart-item-qty">
+            <input type="number" min="1" value="${item.qty}" data-id="${escapeHtml(String(item.id))}">
+          </div>
+
+          <div class="cart-item-subtotal">
+            ${formatMoney(itemTotal)}
+          </div>
+        `;
+
+        container.appendChild(row);
+      });
+
+      if (subtotalEl) subtotalEl.textContent = formatMoney(subtotal);
+      if (totalEl) totalEl.textContent = formatMoney(subtotal);
+
+      attachCartHandlers();
+    }
+
+    function attachCartHandlers() {
+      // quantity change
+      document.querySelectorAll('.cart-item-qty input').forEach(input => {
+        input.addEventListener('change', () => {
+          const id = input.getAttribute('data-id');
+          let q = parseInt(input.value) || 1;
+          if (q < 1) q = 1;
+
+          const cart = getCart();
+          const idx = cart.findIndex(i => String(i.id) === String(id));
+          if (idx > -1) {
+            cart[idx].qty = q;
+            saveCart(cart);
+          }
+        });
+      });
+
+      // remove button
+      document.querySelectorAll('.cart-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          let cart = getCart();
+          cart = cart.filter(i => String(i.id) !== String(id));
+          saveCart(cart);
+        });
+      });
+
+      // checkout button (basic check)
+      const checkoutBtn = document.getElementById('checkoutBtn');
+      if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+          const cart = getCart();
+          if (!cart.length) {
+            alert('Your cart is empty. Add items first.');
+            return;
+          }
+          // yahan apna checkout page route lagao
+          window.location.href = 'checkout.html';
+        });
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/[&<>"']/g, function (m) {
+        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m];
+      });
+    }
+
+    // page load pe render
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderCartPage);
+    } else {
+      renderCartPage();
+    }
+  </script>
+
+</body>
+
+<!-- Mirrored from nexussecure.shop/Cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:38 GMT -->
+</html>

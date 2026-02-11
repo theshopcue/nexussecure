@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from nexussecure.shop/norton.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:38 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusSecure - norton</title>
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jivosite.com/widget/UqZSn4p2Sq" async></script>
+
+  <!-- SHOP PAGE SPECIFIC CSS -->
+  <style>
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 1.5rem 3.5rem; /* fixed navbar ke niche se start */
+    }
+
+    .shop-hero {
+      text-align: center;
+      padding: 3rem 2rem 2.5rem;
+      border-radius: 20px;
+      background: radial-gradient(circle at top left, rgba(255,107,107,0.14), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(78,205,196,0.16), transparent 55%),
+                  #ffffff;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+      margin-bottom: 2.5rem;
+    }
+
+    .shop-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.9rem;
+    }
+
+    .shop-hero-badge i {
+      font-size: 0.9rem;
+      color: #ff6b6b;
+    }
+
+    .shop-hero h1 {
+      margin: 0 0 0.6rem;
+      font-size: 2.1rem;
+      color: #0f172a;
+    }
+
+    .shop-hero p {
+      margin: 0 0 1.4rem;
+      font-size: 0.98rem;
+      color: #4b5563;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .shop-hero-meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 0.6rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
+    .shop-hero-meta span i {
+      margin-right: 0.3rem;
+      color: #10b981;
+    }
+
+    /* PRODUCT GRID */
+
+    .shop-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .shop-main {
+      flex: 1 1 65%;
+    }
+
+    .shop-sidebar {
+      flex: 1 1 30%;
+      min-width: 260px;
+      max-width: 360px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    @media (max-width: 900px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.4rem 1.4rem 1.3rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-pill {
+      position: absolute;
+      top: 0.9rem;
+      right: 1rem;
+      font-size: 0.72rem;
+      padding: 0.14rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(34,197,94,0.08);
+      color: #15803d;
+      border: 1px solid rgba(34,197,94,0.4);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .product-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #111827;
+      margin: 0.2rem 0 0.15rem;
+      padding-right: 3.2rem; /* badge space */
+    }
+
+    .product-meta {
+      font-size: 0.85rem;
+      color: #6b7280;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .product-meta span i {
+      margin-right: 0.25rem;
+      color: #4ecdc4;
+    }
+
+    .product-desc {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.4rem;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .product-price-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .product-old-price {
+      font-size: 0.82rem;
+      text-decoration: line-through;
+      color: #9ca3af;
+    }
+
+    .product-save {
+      font-size: 0.78rem;
+      color: #059669;
+      font-weight: 600;
+    }
+
+    .btn.add-to-cart {
+      padding: 0.55rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      color: #ffffff;
+      box-shadow: 0 12px 26px rgba(248, 113, 113, 0.55);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+    }
+
+    .btn.add-to-cart i {
+      font-size: 0.95rem;
+    }
+
+    .btn.add-to-cart:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px rgba(248, 113, 113, 0.7);
+    }
+
+    /* SIDEBAR SUMMARY / INFO */
+
+    .shop-sidebar-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.6rem 1.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.07);
+      margin-bottom: 1.4rem;
+    }
+
+    .shop-sidebar-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+      color: #111827;
+    }
+
+    .shop-sidebar-card p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .shop-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-top: 0.6rem;
+      font-size: 0.83rem;
+      color: #374151;
+    }
+
+    .shop-badges span i {
+      margin-right: 0.4rem;
+      color: #22c55e;
+    }
+
+    .shop-sidebar-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 0.7rem;
+    }
+
+    @media (max-width: 900px) {
+      .shop-layout {
+        flex-direction: column;
+      }
+      .shop-sidebar {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 95px 1.2rem 3rem;
+      }
+      .shop-hero {
+        padding: 2.4rem 1.4rem 2.2rem;
+      }
+      .shop-hero h1 {
+        font-size: 1.7rem;
+      }
+    }
+    /* ================ SHOP CATALOG SECTIONS (All Products below hero) ================ */
+
+/* Upar "All Products" title section */
+.page-hero {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.page-hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-hero h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Category sections: Norton, Trend Micro, Peripherals, HP Printers */
+.product-section {
+  margin-top: 2.2rem;
+}
+
+/* Section header: title + "View All Products" link */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.section-header .view-all {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #0ea5e9;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.section-header .view-all:hover {
+  text-decoration: underline;
+}
+
+/* Product grid (cards) – yeh existing .product-grid bhi use karega */
+.product-section .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+/* Tablet / mobile ke liye responsive columns */
+@media (max-width: 1100px) {
+  .product-section .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .product-section .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .product-section .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual product card */
+.product {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  padding: 0.95rem 0.95rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+/* Product link (image + title) */
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Image thumb */
+.product .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.55rem;
+}
+
+.product .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Product title */
+.product .prod-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Price line */
+.prod-price {
+  margin-top: 0.25rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.prod-price .old {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.prod-price .new {
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Add to cart button (small card version) */
+.btn-add {
+  margin-top: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(248, 113, 113, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(248, 113, 113, 0.7);
+  opacity: 0.97;
+}
+.section {
+  padding: 60px 20px;
+  background: #ffffff;  /* ✅ white background */
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.section .desc {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555555;
+}
+
+.features {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature {
+  background: #f8f8f8;  /* light gray card bg */
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  border-color: #bbbbbb;
+  background: #ffffff;
+}
+
+.feature img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+@media (max-width: 992px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/Logo.png" alt="">
+        NexusSecure
+      </div>
+
+      <!-- LEFT: nav links (collapsible on mobile) -->
+      <div class="nav-left" id="navLinks">
+        <ul class="nav-links">
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+        <!-- RIGHT icons (inside same collapsible container on mobile) -->
+        <div class="nav-right">
+          <a href="Cart.html" class="icon-btn" title="Cart">🛒</a>
+          <a href="Account.html" class="icon-btn" title="Account">👤</a>
+        </div>
+      </div>
+
+      <!-- HAMBURGER BUTTON (mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+<!-- mobile backdrop (used by script) -->
+<div id="mobileBackdrop" class="mobile-backdrop" aria-hidden="true"></div>
+
+  <!-- HERO SECTION: full image visible (no cropping) -->
+  <section class="hero" role="img" aria-label="Promotional banner">
+    <!-- Ensure images/norton.jpg is the full-resolution banner you want to show -->
+    <img class="hero-img" src="images/norton.jpg" alt="LifeLock / Norton promotional banner" style="width: 100%;">
+    <div class="hero-content" aria-hidden="true">
+      <h1>Multi-Device Subscriptions Now In Store – LifeLock PC Protection in USA</h1>
+      <div class="tag">Save Up to 60% on Your Subscription Today!</div>
+      <p>Get Premium Security, SecureLine VPN, System Utility, and Ultimate Multi-Device Subscriptions with Automatic & Manual renewal options.</p>
+    </div>
+  </section>
+
+  <!-- 💎 Features -->
+  <section class="section">
+    <h2>Multi-Device Subscriptions — LifeLock PC Protection in USA</h2>
+    <p class="desc">The My AV store offers top-rated premium subscriptions for your Phone, PC, Mac, and Tablets. Our single plans cover all devices with LifeLock, Norton & Trend Micro products.</p>
+
+    <div class="features">
+      <div class="feature">
+        <img src="images/service-icon3.webp" alt="PC">
+        <h3>For PC</h3>
+        <p>Protect your system with LifeLock Identity Theft Protection and Norton 360 Security Suite.</p>
+      </div>
+
+      <div class="feature">
+        <img src="images/service-icon2.webp" alt="Phones">
+        <h3>Phones</h3>
+        <p>Secure smartphones with LifeLock and Norton 360 mobile protection anytime, anywhere.</p>
+      </div>
+
+      <div class="feature">
+        <img src="images/service-icon6.webp" alt="Gaming Consoles">
+        <h3>Gaming Consoles</h3>
+        <p>Enjoy safe gaming with Norton 360 with LifeLock Ultimate Plus (VPN & Privacy Tools).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💻 Product Grid -->
+  <section class="product-section">
+      <div class="section-header">
+        <h2>Norton Security</h2>
+        <a class="view-all" href="#">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p9 -->
+        <article class="product" data-id="p9" data-title="Norton 360 Premium For 10 Devices" data-price="99.99" data-image="images/n1.webp">
+          <a class="product-link" href="product-n1.html" title="Norton 360 Premium">
+            <div class="thumb"><img src="images/n1.webp" alt="Norton 360 Premium"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Premium For 10 Devices</div>
+            <div class="prod-price"><span class="new">$99.99</span></div>
+            <button class="btn-add" data-id="p9" data-price="99.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p10 -->
+        <article class="product" data-id="p10" data-title="Norton 360 Standard — 1 Device" data-price="64.99" data-image="images/n2.webp">
+          <a class="product-link" href="product-n2.html" title="Norton 360 Standard">
+            <div class="thumb"><img src="images/n2.webp" alt="Norton Standard"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Standard — 1 Device</div>
+            <div class="prod-price"><span class="new">$64.99</span></div>
+            <button class="btn-add" data-id="p10" data-price="64.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p11 -->
+        <article class="product" data-id="p11" data-title="Norton 360 Deluxe — 3 Devices" data-price="79.99" data-image="images/n3.webp">
+          <a class="product-link" href="product-n3.html" title="Norton Deluxe">
+            <div class="thumb"><img src="images/n3.webp" alt="Norton Deluxe"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Deluxe — 3 Devices</div>
+            <div class="prod-price"><span class="new">$79.99</span></div>
+            <button class="btn-add" data-id="p11" data-price="79.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p12 -->
+        <article class="product" data-id="p12" data-title="Norton 360 Deluxe - 5 devices" data-price="89.99" data-image="images/n4.webp">
+          <a class="product-link" href="product-n4.html" title="Norton 5 devices">
+            <div class="thumb"><img src="images/n4.webp" alt="Norton 5 devices"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Deluxe - 5 devices</div>
+            <div class="prod-price"><span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p12" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+     <section class="product-section">
+      <div class="section-header">
+        <h2>TREND MICRO</h2>
+        <a class="view-all" href="#">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p5 -->
+        <article class="product" data-id="p5" data-title="Trend Micro Internet Security 3 Devices 1 Year" data-price="49.99" data-image="images/t1.webp">
+          <a class="product-link" href="product-t1.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="images/t1.webp" alt="Trend Micro Internet"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security 3 Devices 1 Year</div>
+            <div class="prod-price"><span class="old">$59.99</span> <span class="new">$49.99</span></div>
+            <button class="btn-add" data-id="p5" data-price="49.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p6 -->
+        <article class="product" data-id="p6" data-title="Trend Micro Internet Security 3 User, 1 Year" data-price="89.99" data-image="images/t2.webp">
+          <a class="product-link" href="product-t2.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="images/t2.webp" alt="Trend Micro Internet"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security 3 User, 1 Year</div>
+            <div class="prod-price"><span class="old">$99.99</span> <span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p6" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p7 -->
+        <article class="product" data-id="p7" data-title="Trend Micro Maximum Security 3 Devices 1 Year" data-price="99.99" data-image="images/t3.webp">
+          <a class="product-link" href="product-t3.html" title="Trend Micro Maximum">
+            <div class="thumb"><img src="images/t3.webp" alt="Trend Micro Maximum"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Maximum Security 3 Devices 1 Year</div>
+            <div class="prod-price"><span class="old">$119.99</span> <span class="new">$99.99</span></div>
+            <button class="btn-add" data-id="p7" data-price="99.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p8 -->
+        <article class="product" data-id="p8" data-title="Trend Micro Internet Security" data-price="89.99" data-image="images/t4.webp">
+          <a class="product-link" href="product-t4.html" title="Trend Micro Internet Security">
+            <div class="thumb"><img src="images/t4.webp" alt="Trend Micro Internet Security"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security</div>
+            <div class="prod-price"><span class="old">$109.99</span> <span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p8" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  <footer>
+    <div class="footer-content">
+      <!-- 1: NexusSecure Reviews -->
+      <div class="footer-section">
+        <h3>NexusSecure</h3>
+       
+        <p>Email Us: info@NexusSecure.shop</p>
+        <p>
+          NexusSecure delivers battle-tested analysis of antivirus, VPN, and endpoint protection solutions.
+          Our insights are powered by rigorous real-world threat emulation, performance benchmarks, and unbiased expert evaluation —
+          giving you clarity to protect your digital world with confidence.
+        </p>
+      </div>
+
+      <!-- 2: Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 3: Our Policies -->
+      <div class="footer-section">
+        <h3>Our Policies</h3>
+        <ul>
+          <li><a href="Terms.html">Terms & Conditions</a></li>
+          <li><a href="Refund.html">Refund & Return Policy</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Shopping.html">Shopping Policy</a></li>
+          <li><a href="Payment.html">Payment Policy</a></li>
+          <li><a href="Cookie.html">Cookie Policy</a></li>
+          <li><a href="Shipping.html">Shipping/Delivery Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NexusSecure. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SMALL JS FOR MOBILE MENU -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks   = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <!-- CART LOGIC (agar tumne js/cart.js banaya hai to yeh line zaroor rakho) -->
+  <script src="js/cart.js"></script>
+  
+
+<script>
+  
+    // --- CART LOGIC (localStorage) ---
+    function getCart() {
+      try { return JSON.parse(localStorage.getItem('NexusSecure_cart') || '[]'); } catch(e){ return []; }
+    }
+    function saveCart(cart) {
+      localStorage.setItem('NexusSecure_cart', JSON.stringify(cart));
+      updateCartAmount();
+    }
+    function updateCartAmount() {
+      const cart = getCart();
+      const total = cart.reduce((s,i) => s + (Number(i.price) * Number(i.qty)), 0);
+      const el = document.getElementById('cartAmount');
+      if(el) el.textContent = '$' + total.toFixed(2);
+    }
+
+    // initialize
+    updateCartAmount();
+
+    // helper - product data
+    function getProductDataFromArticle(el) {
+      if(!el) return null;
+      const id = el.getAttribute('data-id') || ('p_' + Date.now());
+      const title = el.getAttribute('data-title') || (el.querySelector('.prod-title') && el.querySelector('.prod-title').textContent.trim()) || 'Product';
+      let price = el.getAttribute('data-price') || '';
+      if(!price) {
+        // try read from .prod-price .new text
+        const priceText = el.querySelector('.prod-price .new')?.textContent || '';
+        price = priceText.replace(/[^0-9.-]+/g,'') || '0';
+      }
+      const image = el.getAttribute('data-image') || (el.querySelector('.thumb img') && el.querySelector('.thumb img').getAttribute('src')) || '';
+      return { id, title, price: Number(price), image };
+    }
+
+    // add-to-cart click handlers
+    document.querySelectorAll('.btn-add').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const article = btn.closest('.product');
+        const pdata = getProductDataFromArticle(article);
+        if(!pdata) return;
+        const cart = getCart();
+        const idx = cart.findIndex(i => i.id === pdata.id);
+        if(idx > -1) {
+          cart[idx].qty = Number(cart[idx].qty) + 1;
+        } else {
+          cart.push({ id: pdata.id, title: pdata.title, price: Number(pdata.price), image: pdata.image, qty: 1 });
+        }
+        saveCart(cart);
+        // redirect to cart page
+        window.location.href = 'cart-2.html';
+      });
+    });
+
+    // make product articles keyboard accessible
+    document.querySelectorAll('.product').forEach(prod => {
+      prod.setAttribute('tabindex','0');
+      prod.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') {
+          const link = prod.querySelector('a.product-link');
+          if(link) link.click();
+        }
+      });
+    });
+</script>
+
+</body>
+
+<!-- Mirrored from nexussecure.shop/norton.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:39 GMT -->
+</html>

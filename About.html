@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from nexussecure.shop/About.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:37 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusSecure - About us</title>
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff; /* body bg white */
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* HEADER / NAVBAR */
+
+    header {
+      background: #ffffff; /* navbar bg white */
+      color: #111;
+      padding: 0.7rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+    }
+/* About Us ke niche colourful line */
+
+.tf-page-title .title {
+  position: relative;
+  display: inline-block; /* taaki line sirf text ke niche aaye */
+}
+
+.tf-page-title .title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;             /* text se thoda gap */
+  width: 100%;               /* pura "About Us" jitni line */
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4); /* NexusSecure wala gradient */
+}
+
+  
+   
+
+    /* MAIN CONTENT */
+
+    main {
+      margin-top: 80px;
+      padding: 2rem 1.5rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+      animation: slideUp 0.8s ease-out;
+    }
+
+    section h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
+
+    section p {
+      line-height: 1.7;
+      font-size: 0.98rem;
+      color: #444;
+      max-width: 900px;
+      margin: 0.5rem auto 0;
+      text-align: center;
+    }
+
+    /* ========== TERMS PAGE TITLE SECTION ========== */
+
+    .tf-page-title {
+      padding: 80px 0 40px;
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      margin-top: 80px;
+    }
+
+    .tf-page-title .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .box-title {
+      text-align: center;
+    }
+
+    .box-title .title {
+      font-size: 2.4rem;
+      margin: 0;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .box-title .title span {
+      display: inline-block;
+      position: relative;
+    }
+
+    .box-title .title span::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    }
+
+    .s-term-user {
+      padding: 40px 0 60px;
+      background: #ffffff;
+    }
+
+    .s-term-user .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .s-term-user .content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .term-item {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .display-gap > * + * {
+      margin-top: 1.2rem;
+    }
+
+    .term-item p {
+      margin: 0.5rem 0;
+      line-height: 1.8;
+      font-size: 0.98rem;
+      color: #374151;
+    }
+
+    .term-item strong {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .term-item em {
+      font-style: italic;
+      color: #4b5563;
+    }
+
+    .term-item h2 {
+      font-size: 1.3rem;
+      margin: 1.8rem 0 0.6rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .term-item ul {
+      margin: 0.5rem 0 0.5rem 1.2rem;
+      padding: 0;
+    }
+
+    .term-item ul li {
+      margin-bottom: 0.4rem;
+      line-height: 1.7;
+      color: #374151;
+      font-size: 0.96rem;
+    }
+
+    .term-item a {
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+
+    .term-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== COMMON LAYOUT HELPERS ====== */
+
+    .flat-spacing-3 {
+      padding: 60px 0;
+    }
+
+    .pt-4 {
+      padding-top: 2rem !important;
+    }
+
+    .pt-0 {
+      padding-top: 0 !important;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > [class*="col-"] {
+      padding-left: 12px;
+      padding-right: 12px;
+      box-sizing: border-box;
+    }
+
+    .col-xl-7 {
+      width: 58.3333%;
+    }
+
+    .col-xl-5 {
+      width: 41.6667%;
+    }
+
+    .col-md-6 {
+      width: 50%;
+    }
+
+    .col-12 {
+      width: 100%;
+    }
+
+    .col-lg-4 {
+      width: 33.3333%;
+    }
+
+    .col-lg-7 {
+      width: 58.3333%;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-md {
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .text-main {
+      color: #4b5563;
+    }
+
+    .display-md-2 {
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+
+    .fw-medium {
+      font-weight: 600;
+    }
+
+    .radius-16 {
+      border-radius: 16px;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .w-100 {
+      width: 100%;
+    }
+
+    .h-100 {
+      height: 100%;
+    }
+
+    .object-fit-cover {
+      object-fit: cover;
+    }
+
+    /* ====== WHY CHOOSE SECTION ====== */
+
+    .flat-title-2 {
+      margin-bottom: 2.5rem;
+    }
+
+    .flat-title-2 .display-md-2 {
+      color: #111827;
+      margin-bottom: 0.6rem;
+    }
+
+    .flat-title-2 .text-main {
+      max-width: 650px;
+      margin: 0.3rem auto 0;
+    }
+
+    .flat-spacing-3 .item {
+      font-size: 0.96rem;
+    }
+
+    .flat-spacing-3 .item h3 {
+      font-size: 1.25rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+
+    .flat-spacing-3 .item h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .flat-spacing-3 .item p {
+      margin: 0.2rem 0;
+      line-height: 1.8;
+      color: #374151;
+      text-align: left;
+    }
+
+    /* RIGHT SIDE ICON CARDS (WHY CHOOSE) */
+
+    .why-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .why-icon-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+
+    .why-icon-card .icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 107, 107, 0.08);
+    }
+
+    .why-icon-card .icon-circle i {
+      font-size: 1.35rem;
+      color: #ff6b6b;
+    }
+
+    .why-icon-card h4 {
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+      color: #111827;
+    }
+
+    .why-icon-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #4b5563;
+      text-align: left;
+    }
+
+    /* ====== PIONEERING SECTION (Create style) ====== */
+
+    .flat-title-2 .box-title p.display-md-2 {
+      margin: 0 0 0.75rem;
+    }
+
+    .flat-title-2 .box-text .text-md {
+      margin: 0;
+      text-align: left;
+    }
+
+    /* ====== ICON BOX SWIPER SECTION ====== */
+
+    .tf-swiper {
+      margin-top: 2rem;
+    }
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    .tf-icon-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .tf-icon-box.style-border {
+      border: 1px solid #e5e7eb;
+    }
+
+    .tf-icon-box .box-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 14px rgba(148, 163, 184, 0.35);
+      margin-bottom: 0.6rem;
+    }
+
+    .tf-icon-box .box-icon i {
+      font-size: 1.4rem;
+      color: #ff6b6b;
+    }
+
+    .tf-icon-box .content h6 {
+      font-size: 1.05rem;
+      margin: 0 0 0.4rem;
+      color: #111827;
+    }
+
+    .tf-icon-box .content p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .text-sm {
+      font-size: 0.9rem;
+    }
+
+    .text-line-clamp-4 {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .sw-dot-default.sw-pagination-iconbox {
+      margin-top: 1.4rem;
+    }
+
+    .sw-dot-default .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.6);
+      opacity: 1;
+      margin: 0 4px !important;
+    }
+
+    .sw-dot-default .swiper-pagination-bullet-active {
+      width: 18px;
+      background: #ffffff;
+    }
+
+   
+
+    /* ANIMATIONS */
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1200px) {
+      .col-xl-7,
+      .col-xl-5 {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .col-md-6 {
+        width: 50%;
+      }
+
+      .col-lg-4,
+      .col-lg-7 {
+        width: 100%;
+      }
+
+      .flat-title-2 {
+        text-align: center;
+      }
+
+      .flat-title-2 .box-text {
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .col-xl-7,
+      .col-xl-5,
+      .col-md-6,
+      .col-12 {
+        width: 100%;
+      }
+
+      .flat-spacing-3 {
+        padding: 40px 0;
+      }
+
+      .display-md-2 {
+        font-size: 1.4rem;
+      }
+
+      .tf-icon-box {
+        padding: 1.4rem 1.2rem;
+      }
+
+      
+  </style>
+</head>
+<body>
+
+    <header>
+    <nav>
+      <div class="logo">
+        <img src="images/Logo.png" alt="">
+        NexusSecure
+      </div>
+
+      <!-- LEFT: nav links (collapsible on mobile) -->
+      <div class="nav-left" id="navLinks">
+        <ul class="nav-links">
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+         
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+        <!-- RIGHT icons (inside same collapsible container on mobile) -->
+        <div class="nav-right">
+  <a href="Cart.html" class="icon-btn" title="Cart">🛒</a>
+  <a href="Account.html" class="icon-btn" title="Account">👤</a>
+</div>
+
+      </div>
+
+      <!-- HAMBURGER BUTTON (mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <section class="tf-page-title">
+    <div class="container">
+      <div class="box-title text-center">
+        <h4 class="title">About Us</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="flat-spacing-3 pb-0">
+    <div class="container">
+      <div class="flat-title-2 d-xl-flex justify-content-xl-between mt-4">
+        <div class="box-text">
+          <div class="text-md display-gap">
+
+            <p>Welcome to <strong>NexusSecure</strong>, a registered and independently operated e-commerce platform dedicated to providing <strong>genuine antivirus solutions</strong> for individual users, professionals, and businesses across the globe.</p>
+
+            <p>We specialize in offering <strong>official, licensed antivirus software</strong> as a <strong>third-party authorized reseller</strong>, ensuring our customers receive products that are verified, secure, and directly sourced from trusted cybersecurity providers. With a strong commitment to <strong>reliability, integrity, and customer empowerment</strong>, our platform is built to simplify your digital safety needs—all in one place.</p>
+
+            <p>At NexusSecure, we understand the importance of data protection and cyber-resilience in today's digital environment. That’s why our entire operation is designed to help users make <strong>informed, confident purchases</strong> with full transparency at every step.</p>
+
+            <h2>What We Offer</h2>
+
+            <p>NexusSecure offers a <strong>curated selection of antivirus software solutions</strong>, carefully chosen from globally recognized providers. Each product is:</p>
+
+            <ul>
+              <li><p>Fully licensed and authorized</p></li>
+              <li><p>Delivered electronically for instant access</p></li>
+              <li><p>Supported by expert customer service</p></li>
+            </ul>
+
+            <p>From personal use to small business needs, we provide software that meets the highest standards of performance and authenticity.</p>
+
+            <h2>How We Work</h2>
+
+            <p>All transactions are processed <strong>securely online through Stripe</strong>, one of the most trusted payment gateways in the industry. Once a purchase is completed, product license details are <strong>delivered electronically to your registered email address</strong>, ensuring <strong>fast, eco-friendly, and hassle-free fulfillment</strong>.</p>
+
+            <p>We maintain a <strong>zero-tolerance policy for counterfeit or unauthorized software</strong>, and all digital products sold on NexusSecure are verified through official distribution channels.</p>
+
+            <h2>Our Values</h2>
+
+            <p>We believe that honesty, clarity, and user trust form the foundation of any meaningful customer relationship. That’s why we’re committed to:</p>
+
+            <ul>
+              <li><p><strong>Transparent product representation</strong></p></li>
+              <li><p><strong>Respect for intellectual property</strong></p></li>
+              <li><p><strong>Prompt support and responsiveness</strong></p></li>
+              <li><p><strong>Compliance with the highest e-commerce standards</strong></p></li>
+            </ul>
+
+            <p>Our customers choose NexusSecure not only for our products—but for our <strong>people-first approach</strong> to digital commerce.</p>
+
+            <h2>Respect for Intellectual Property</h2>
+
+            <p>All trademarks, logos, and brand names featured in our content belong to their respective owners. NexusSecure does not claim ownership or affiliation. References are made solely for <strong>informational and descriptive purposes</strong>, reflecting our commitment to accuracy and transparency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section class="flat-spacing-3 pt-4">
+    <div class="container">
+      <div class="flat-title-2 text-center">
+        <div class="display-md-2 fw-medium">
+          Why Choose NexusSecure
+        </div>
+        <div class="text-md text-main">
+          Here’s what makes NexusSecure the trusted name for antivirus software:
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-7 col-md-6 item">
+          <h3>Certified &amp; Authorized Resellers</h3>
+          <p>We’re not just another online shop. NexusSecure is officially recognized as a <strong>certified third-party reseller</strong>, which means every product listed on our site is genuine, backed by authorization from the original software providers.</p>
+
+          <h3>Transparent Business Practices</h3>
+          <p>From clear product listings to trustworthy pricing and support, NexusSecure operates with full transparency. We believe customers deserve <strong>honest information</strong> without unnecessary complexity.</p>
+
+          <h3>Expertly Curated Products</h3>
+          <p>We partner only with <strong>well-known antivirus brands</strong>, offering a carefully selected range of software that meets today’s security standards. Whether for personal use or enterprise-level protection, you’ll find the right solution here.</p>
+
+          <h3>Independent and Customer-Focused</h3>
+          <p>As an independently run business, we’re free to focus solely on what matters most—<strong>you</strong>. Our independence gives us the flexibility to provide better pricing, faster support, and a more personalized shopping experience.</p>
+
+          <h3>Secure &amp; Easy Shopping Experience</h3>
+          <p>Our website is optimized for <strong>clarity, speed, and usability</strong>, allowing you to find what you need quickly and check out with confidence. All payments are processed through <strong>verified and encrypted gateways</strong>, giving you peace of mind from start to finish.</p>
+
+          <h3>Always Updated, Always Reliable</h3>
+          <p>We regularly update our catalog to reflect the <strong>latest official antivirus releases</strong>, so you're never behind on protection. No expired licenses, no unauthorized versions—<strong>just verified software</strong> you can count on.</p>
+        </div>
+
+        <!-- IMAGE HATAA DIYA – YAHAN ICON CARDS DAL DIYE -->
+        <div class="col-xl-5 col-md-6">
+          <div class="why-icons">
+            <div class="why-icon-card">
+              <div class="icon-circle">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div>
+                <h4>Trusted Security</h4>
+                <p>Licenses sourced only from official and verified antivirus vendors.</p>
+              </div>
+            </div>
+
+            <div class="why-icon-card">
+              <div class="icon-circle">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div>
+                <h4>Instant Digital Delivery</h4>
+                <p>Get your activation details directly in your inbox within minutes.</p>
+              </div>
+            </div>
+
+            <div class="why-icon-card">
+              <div class="icon-circle">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div>
+                <h4>Dedicated Support</h4>
+                <p>Friendly help for installation, activation, and post-purchase queries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /RIGHT ICON CARDS -->
+      </div>
+    </div>
+  </section>
+  <!-- /Why Choose -->
+
+  <!-- Creat style -->
+  <section class="flat-spacing-3 pt-0">
+    <div class="container">
+      <div class="flat-title-2 d-xl-flex justify-content-xl-between row">
+        <div class="box-title col-12 col-lg-4">
+          <p class="display-md-2 fw-medium">
+            Pioneering Tomorrow’s Cybersecurity Marketplace
+          </p>
+        </div>
+        <div class="box-text col-12 col-lg-7">
+          <p class="text-md">
+            As cybersecurity threats grow more complex, NexusSecure is unwavering in its mission to evolve. We're actively expanding our product range, elevating customer experiences, and innovating at the intersection of trust and technology. Our vision? To become the leading destination for authentic, reliable antivirus solutions across the U.S.—a trusted ally in every user’s digital defense journey.
+          </p>
+        </div>
+      </div>
+
+      <div dir="ltr" class="swiper tf-swiper" data-swiper='{
+                    "slidesPerView": 1,
+                    "spaceBetween": 12,
+                    "speed": 800,
+                    "preventInteractionOnTransition": false, 
+                    "touchStartPreventDefault": false,
+                    "pagination": { "el": ".sw-pagination-iconbox", "clickable": true },
+                    "breakpoints": {
+                        "575": { "slidesPerView":2, "spaceBetween": 12}, 
+                        "992": { "slidesPerView": 3, "spaceBetween": 24}
+                    }
+                }'>
+        <div class="swiper-wrapper">
+          <!-- item 1 -->
+          <div class="swiper-slide">
+            <div class="tf-icon-box style-border">
+              <div class="box-icon">
+                <!-- ICON CHANGED TO FONT AWESOME -->
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="content">
+                <h6>Certified Authenticity</h6>
+                <p class="text-sm text-main text-line-clamp-4">
+                  Every antivirus software we offer is sourced directly from authorized distributors. As a certified third-party reseller, we guarantee genuine licenses—no cracks, no shortcuts, just trusted protection.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div class="swiper-slide">
+            <div class="tf-icon-box style-border">
+              <div class="box-icon">
+                <!-- ICON CHANGED TO FONT AWESOME -->
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="content">
+                <h6>Fast Digital Delivery</h6>
+                <p class="text-sm text-main text-line-clamp-4">
+                  Once your order is placed, your digital license is delivered quickly and reliably to your inbox or account dashboard. No waiting for physical shipments—just fast, verified access to the protection you need.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- item 3 -->
+          <div class="swiper-slide">
+            <div class="tf-icon-box style-border">
+              <div class="box-icon">
+                <!-- ICON CHANGED TO FONT AWESOME -->
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="content">
+                <h6>Secure and Hassle-Free Shopping</h6>
+                <p class="text-sm text-main text-line-clamp-4">
+                  Our platform is built with user security and ease in mind. From browsing to checkout, NexusSecure provides a seamless online experience supported by secure payment systems and clear order tracking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex d-xl-none sw-dot-default sw-pagination-iconbox justify-content-center">
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <footer>
+    <div class="footer-content">
+      <!-- 1: NexusSecure Reviews -->
+    <div class="footer-section">
+  <h3>NexusSecure</h3>
+  
+  <p>Email Us: info@NexusSecure.shop</p>
+  <p>
+    NexusSecure delivers battle-tested analysis of antivirus, VPN, and endpoint protection solutions.
+    Our insights are powered by rigorous real-world threat emulation, performance benchmarks, and unbiased expert evaluation —
+    giving you clarity to protect your digital world with confidence.
+  </p>
+</div>
+
+
+      <!-- 2: Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index-2.html">Home</a></li>
+           <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Privacy.html">Privacy Policy</a></li>
+                <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 3: Our Policies -->
+      <div class="footer-section">
+        <h3>Our Policies</h3>
+        <ul>
+          <li><a href="Terms.html">Terms & Conditions</a></li>
+          <li><a href="Refund.html">Refund & Return Policy</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Shopping.html">Shopping Policy</a></li>
+          <li><a href="Payment.html">Payment Policy</a></li>
+          <li><a href="Cookie.html">Cookie Policy</a></li>
+          <li><a href="Shipping.html">Shipping/Delivery Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NexusSecure. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SMALL JS FOR MOBILE MENU -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+
+<!-- Mirrored from nexussecure.shop/About.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:37 GMT -->
+</html>

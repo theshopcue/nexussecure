@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from nexussecure.shop/Contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:37 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusSecure - Contact Us</title>
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Contact page specific CSS -->
+  <style>
+    :root {
+      --ns-gradient: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      --ns-dark: #0f172a;
+      --ns-muted: #4b5563;
+      --ns-border: #e5e7eb;
+      --ns-bg-soft: #f9fafb;
+    }
+
+    /* MAIN WRAPPER (extra safety) */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 1.5rem 4rem; /* navbar ke niche se start */
+    }
+
+    /* ========== CONTACT HERO ========== */
+
+    .contact-hero {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+      border: 1px solid #f3f4f6;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0f172a;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #e5e7eb;
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-tag i {
+      font-size: 0.9rem;
+      color: #ff6b6b;
+    }
+
+    .contact-hero-title {
+      font-size: 2.1rem;
+      margin: 0 0 0.4rem;
+      color: var(--ns-dark);
+      font-weight: 700;
+    }
+
+    .contact-hero-sub {
+      font-size: 0.98rem;
+      color: var(--ns-muted);
+      margin: 0 0 1.4rem;
+      max-width: 620px;
+    }
+
+    .contact-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #111827;
+    }
+
+    .contact-meta-item i {
+      font-size: 1rem;
+      color: #4ecdc4;
+    }
+
+    /* ========== CONTACT GRID (INFO CARDS) ========== */
+
+    .contact-grid-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .contact-card {
+      flex: 1 1 260px;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--ns-border);
+      padding: 1.7rem 1.5rem;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .contact-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(148, 163, 184, 0.35);
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-card-icon i {
+      font-size: 1.2rem;
+      color: #ff6b6b;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+      color: #111827;
+    }
+
+    .contact-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--ns-muted);
+      line-height: 1.6;
+    }
+
+    .contact-card a {
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== FORM SECTION ========== */
+
+    .contact-form-section {
+      background: var(--ns-bg-soft);
+      border-radius: 20px;
+      padding: 2.2rem 2rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .contact-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .contact-left {
+      flex: 1 1 260px;
+    }
+
+    .contact-left h2 {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem;
+      color: var(--ns-dark);
+    }
+
+    .contact-left p {
+      margin: 0 0 0.9rem;
+      font-size: 0.95rem;
+      color: var(--ns-muted);
+      max-width: 420px;
+    }
+
+    .contact-highlight {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      margin-top: 0.7rem;
+    }
+
+    .contact-highlight span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #111827;
+    }
+
+    .contact-highlight i {
+      font-size: 0.95rem;
+      color: #22c55e;
+    }
+
+    .contact-right {
+      flex: 1 1 320px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.6rem 1.5rem;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .contact-form-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      margin-bottom: 0.9rem;
+      width: 100%;
+    }
+
+    .form-group.half {
+      flex: 1 1 180px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .form-label span {
+      color: #ef4444;
+    }
+
+    .form-control,
+    textarea.form-control {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-size: 0.92rem;
+      outline: none;
+      background: #f9fafb;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+      resize: vertical;
+    }
+
+    .form-control:focus,
+    textarea.form-control:focus {
+      border-color: #4ecdc4;
+      background: #ffffff;
+      box-shadow: 0 0 0 1px rgba(78, 205, 196, 0.4);
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      max-height: 220px;
+    }
+
+    .form-helper {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 0.2rem;
+    }
+
+    .contact-actions {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0.75rem 1.9rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      background-image: var(--ns-gradient);
+      box-shadow: 0 10px 25px rgba(248, 113, 113, 0.4);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(248, 113, 113, 0.55);
+      opacity: 0.96;
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      max-width: 260px;
+    }
+
+    .contact-note i {
+      color: #22c55e;
+      margin-right: 0.25rem;
+    }
+
+    /* ====== RESPONSIVE ====== */
+
+    @media (max-width: 992px) {
+      main {
+        padding: 100px 1.25rem 3.5rem;
+      }
+
+      .contact-hero {
+        padding: 2.1rem 1.6rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 95px 1rem 3rem;
+      }
+
+      .contact-hero-title {
+        font-size: 1.7rem;
+      }
+
+      .contact-hero-sub {
+        max-width: 100%;
+      }
+
+      .contact-layout {
+        flex-direction: column;
+      }
+
+      .contact-right {
+        padding: 1.4rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (same as tumhara) -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/Logo.png" alt="">
+        NexusSecure
+      </div>
+
+      <!-- LEFT: nav links (collapsible on mobile) -->
+      <div class="nav-left" id="navLinks">
+        <ul class="nav-links">
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+        <!-- RIGHT icons -->
+        <div class="nav-right">
+          <a href="Cart.html" class="icon-btn" title="Cart">🛒</a>
+          <a href="Account.html" class="icon-btn" title="Account">👤</a>
+        </div>
+      </div>
+
+      <!-- HAMBURGER BUTTON (mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========== CONTACT PAGE CONTENT ========== -->
+  <main>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="contact-tag">
+        <i class="fas fa-shield-alt"></i> Contact NexusSecure Support
+      </div>
+      <h1 class="contact-hero-title">We're here to secure your digital world.</h1>
+      <p class="contact-hero-sub">
+        Have a question about antivirus licenses, VPN protection, billing, or technical issues?
+        Reach out to our security-focused support team and we’ll respond as quickly as possible.
+      </p>
+
+      <div class="contact-hero-meta">
+        <div class="contact-meta-item">
+          <i class="fas fa-headset"></i>
+          <span>Priority help for all active customers.</span>
+        </div>
+        <div class="contact-meta-item">
+          <i class="fas fa-clock"></i>
+          <span>Standard response time: within 24 hours.</span>
+        </div>
+        <div class="contact-meta-item">
+          <i class="fas fa-globe-americas"></i>
+          <span>Serving users worldwide, remotely.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT INFO CARDS -->
+    <section class="contact-grid-section">
+      <div class="contact-grid">
+
+        <!-- Card 1 -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-envelope-open-text"></i>
+          </div>
+          <h3>General & Technical Support</h3>
+          <p>
+            For help with activation, license keys, installation, or general questions about NexusSecure.
+          </p>
+          <p><strong>Email:</strong> <a href="#">info@nexussecure.shop</a></p>
+        
+        </div>
+
+        <!-- Card 2 -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3>Sales & Billing</h3>
+          <p>
+            Questions about pricing, bulk orders, invoices, payment failures, or subscription upgrades.
+          </p>
+          <p><strong>Sales Email:</strong> <a href="#">sales@nexussecure.shop</a></p>
+         
+        </div>
+
+        <!-- Card 3 -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-shield-virus"></i>
+          </div>
+          <h3>Security & Partnership</h3>
+          <p>
+            Media inquiries, brand partnerships, affiliate queries, or security research communication.
+          </p>
+          <p><strong>Partnership:</strong> <a href="#">partners@nexussecure.shop</a></p>
+          
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="contact-form-section">
+      <div class="contact-layout">
+
+        <div class="contact-left">
+          <h2>Send us a message</h2>
+          <p>
+            Share a few details about your query and our team will route it to the right security specialist.
+          </p>
+          <div class="contact-highlight">
+            <span><i class="fas fa-check-circle"></i> Product activation & key issues</span>
+            <span><i class="fas fa-check-circle"></i> Refunds, renewals & payment queries</span>
+            <span><i class="fas fa-check-circle"></i> Help choosing the right antivirus or VPN</span>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form action="#" method="post">
+            <div class="contact-form-row">
+              <div class="form-group half">
+                <label class="form-label" for="name">Full Name <span>*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name">
+              </div>
+              <div class="form-group half">
+                <label class="form-label" for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject <span>*</span></label>
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="License, billing, technical issue...">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">How can we help? <span>*</span></label>
+              <textarea id="message" name="message" class="form-control" placeholder="Describe your issue or question in detail."></textarea>
+              <div class="form-helper">
+                Please avoid sharing full card numbers or passwords. Our team will ask for any details safely, if required.
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <button type="submit" class="btn-primary">
+                Submit Request
+              </button>
+              <p class="contact-note">
+                <i class="fas fa-lock"></i>
+                Your details are protected with industry-standard encryption and used only to respond to your request.
+              </p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (same content rakha hai) -->
+  <footer>
+    <div class="footer-content">
+      <!-- 1: NexusSecure Reviews -->
+      <div class="footer-section">
+        <h3>NexusSecure</h3>
+      
+        <p>Email Us: info@NexusSecure.shop</p>
+        <p>
+          NexusSecure delivers battle-tested analysis of antivirus, VPN, and endpoint protection solutions.
+          Our insights are powered by rigorous real-world threat emulation, performance benchmarks, and unbiased expert evaluation —
+          giving you clarity to protect your digital world with confidence.
+        </p>
+      </div>
+
+      <!-- 2: Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 3: Our Policies -->
+      <div class="footer-section">
+        <h3>Our Policies</h3>
+        <ul>
+          <li><a href="Terms.html">Terms & Conditions</a></li>
+          <li><a href="Refund.html">Refund & Return Policy</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Shopping.html">Shopping Policy</a></li>
+          <li><a href="Payment.html">Payment Policy</a></li>
+          <li><a href="Cookie.html">Cookie Policy</a></li>
+          <li><a href="Shipping.html">Shipping/Delivery Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NexusSecure. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SMALL JS FOR MOBILE MENU -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+
+<!-- Mirrored from nexussecure.shop/Contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:37 GMT -->
+</html>

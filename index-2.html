@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from nexussecure.shop/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:37 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusSecure - Your Cybersecurity Partner</title>
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17762999639">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17762999639');
+</script>
+  <style>
+    :root {
+      --ns-gradient: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      --ns-dark: #0b1220;
+      --ns-muted: #6b7280;
+      --ns-border: #e5e7eb;
+      --ns-bg-soft: #f9fafb;
+    }
+
+    /* body margin 0 to remove any default gap */
+    body {
+      margin: 0;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3.5rem; /* upar ka padding hata diya, kyunki hero alag hai */
+    }
+
+ 
+    /* ========== HERO (full-width image, NO box) ========== */
+
+   .hero {
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* image scroll me cut feel kam, premium look */
+
+  width: 100%;
+  margin: 70px 0 0 0;  /* navbar se gap fix 90 → 70 kiya so clean spacing */
+  padding: 0 1.5rem;   /* side padding soft rakha */
+  min-height: 100vh;   /* full visible height me cut nahi */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Subtle dark overlay (box/blur nahi, image bhi clear dikhe) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32); /* light dark overlay only */
+  z-index: 0;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  font-weight: 750;
+  background: var(--ns-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-image: var(--ns-gradient);
+  color: var(--ns-dark);
+  font-size: 0.95rem;
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: none !important;
+  z-index: 1;
+  box-shadow: 0 10px 24px rgba(248,113,113,0.55);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(248,113,113,0.7);
+  opacity: 0.97;
+}
+
+
+    /* ========== GENERIC SECTION LAYOUTS ========== */
+
+    .section {
+      margin-top: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;       /* sab center */
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 1.4rem;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 0;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--ns-muted);
+      margin: 0.25rem 0 0;
+      max-width: 32rem;
+    }
+
+    .section-link {
+      font-size: 0.85rem;
+      color: #0ea5e9;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 0.3rem;
+    }
+
+    .section-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Features */
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1rem;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.1rem 1rem;
+      border: 1px solid var(--ns-border);
+      box-shadow: 0 10px 26px rgba(15,23,42,0.05);
+    }
+
+    .feature-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: var(--ns-gradient);
+      color: #0b1120;
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 0.3rem;
+      font-size: 0.98rem;
+      color: #111827;
+    }
+
+    .feature-card p {
+      margin: 0;
+      font-size: 0.86rem;
+      color: var(--ns-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== PRODUCT SECTION WRAPPER ===== */
+    .product-section {
+      margin-top: 2.5rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .product-section .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+      text-align: left;
+    }
+
+    .product-section .section-header h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #111827;
+    }
+
+    .product-section .view-all {
+      font-size: 0.9rem;
+      color: #0ea5e9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .product-section .view-all:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    /* Desktop & laptop: ALWAYS 4 columns */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));  /* 4 fix */
+      gap: 1.5rem;
+    }
+
+    /* ===== SINGLE PRODUCT CARD ===== */
+
+    .product {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1rem 1rem 1.1rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 26px rgba(15,23,42,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .product .thumb {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      background: #f3f4f6;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .product .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .prod-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 0.2rem;
+      min-height: 2.5em;
+    }
+
+    .prod-price {
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .prod-price .old {
+      text-decoration: line-through;
+      color: #9ca3af;
+      font-size: 0.85rem;
+    }
+
+    .prod-price .new {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .btn-add {
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1.3rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      color: #0b1120;
+      box-shadow: 0 8px 20px rgba(248,113,113,0.45);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn-add:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(248,113,113,0.6);
+      opacity: 0.96;
+    }
+
+    /* How it works */
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1rem;
+    }
+
+    .step-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 0.95rem 1rem;
+      border: 1px dashed var(--ns-border);
+    }
+
+    .step-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      color: #4b5563;
+      margin-bottom: 0.45rem;
+    }
+
+    .step-card h3 {
+      margin: 0 0 0.3rem;
+      font-size: 0.95rem;
+      color: #111827;
+    }
+
+    .step-card p {
+      margin: 0;
+      font-size: 0.86rem;
+      color: var(--ns-muted);
+    }
+
+    
+
+
+    /* CTA strip */
+
+   /* ========== FINAL CTA STRIP (NAVBAR WALI VIBE) ========== */
+
+.cta-strip {
+  margin-top: 3.2rem;
+  padding: 1.6rem 1.5rem;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #0f172a, #020617); /* dark premium bg */
+  color: #e5e7eb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(148,163,184,0.5);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.55);
+}
+
+/* heading – navbar/hero jaisa gradient text */
+.cta-strip h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4); /* same as navbar logo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* sub text subtle */
+.cta-strip p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  max-width: 420px;
+}
+
+/* right side buttons wrap */
+.cta-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cta-actions a {
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+/* primary button – same gradient as hero/brand */
+.cta-strip .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: #0b1120;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 22px rgba(248,113,113,0.5);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.cta-strip .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(248,113,113,0.7);
+  opacity: 0.96;
+}
+
+/* secondary (Talk to our team) – outline style */
+.btn-ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.7);
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn-ghost-dark:hover {
+  background: rgba(15,23,42,0.75);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(15,23,42,0.75);
+}
+
+/* thoda responsive tweak */
+@media (max-width: 768px) {
+  .cta-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-actions {
+    justify-content: flex-start;
+  }
+}
+
+    /* ========== RESPONSIVE ========== */
+
+    @media (max-width: 992px) {
+      .features-grid,
+      .steps-grid,
+      .testimonials {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .hero {
+        padding: 120px 1.4rem 120px;
+        margin-top: 80px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 0 1.1rem 3rem;
+      }
+
+      .features-grid,
+      .product-grid,
+      .steps-grid,
+      .testimonials {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .hero {
+        padding: 100px 1.3rem 100px;
+        margin-top: 70px;
+      }
+    }
+/* ==== WHY SHOP WITH NEXUSSECURE (TRUST BADGES) ==== */
+.ns-benefits {
+  margin-top: 3rem;
+  padding: 1.8rem 1.5rem;
+  border-radius: 18px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.ns-benefits-header {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.ns-benefits-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ns-benefits-header p {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ns-muted);
+}
+
+.ns-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.ns-benefit-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0.9rem 0.9rem 1rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.ns-benefit-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background-image: var(--ns-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #0b1120;
+  margin-bottom: 0.5rem;
+}
+
+.ns-benefit-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.ns-benefit-text {
+  font-size: 0.82rem;
+  color: var(--ns-muted);
+  line-height: 1.5;
+}
+
+/* ==== BRANDS STRIP ==== */
+.ns-brands {
+  margin-top: 2.8rem;
+  padding: 1.6rem 1.5rem;
+  border-radius: 18px;
+  background: #0b1220;
+  color: #e5e7eb;
+  border: 1px solid rgba(148,163,184,0.6);
+}
+
+.ns-brands-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.ns-brands-top h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.ns-brands-top p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.ns-brands-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ns-brands-pill {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.7);
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(15,23,42,0.7);
+}
+
+.ns-brands-pill i {
+  font-size: 0.9rem;
+}
+
+/* ==== FAQ SECTION ==== */
+.ns-faq {
+  margin-top: 3rem;
+}
+
+.ns-faq-header {
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+.ns-faq-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ns-faq-header p {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ns-muted);
+}
+
+.ns-faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ns-faq-item {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 0.75rem 0.9rem;
+}
+
+.ns-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ns-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.ns-faq-item summary span.q {
+  margin-right: 0.5rem;
+}
+
+.ns-faq-item summary span.icon {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.ns-faq-item p {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ns-muted);
+  line-height: 1.6;
+}
+
+/* responsive adjustments */
+@media (max-width: 992px) {
+  .ns-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ns-benefits-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ns-brands-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ns-brands {
+    padding: 1.3rem 1.1rem;
+  }
+}
+.hero h1 {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4); /* Navbar jaisa gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 750;
+  font-size: clamp(2.2rem, 4vw, 3rem); /* center me thoda premium size */
+  text-align: center;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+    /* Tablet & small laptop: PRODUCT GRID already handled above (2 col) */
+    /* Mobile: 1 per row already handled in 768px media query */
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/Logo.png" alt="">
+        NexusSecure
+      </div>
+
+      <div class="nav-left" id="navLinks">
+        <ul class="nav-links">
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <a href="Cart.html" class="icon-btn" title="Cart">🛒</a>
+          <a href="Account.html" class="icon-btn" title="Account">👤</a>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO OUTSIDE MAIN FOR TRUE FULL-WIDTH -->
+  <section id="home" class="hero">
+    <h1>Welcome to NexusSecure</h1>
+    <p>Your ultimate partner in cybersecurity. Protect your digital world with cutting-edge solutions.</p>
+    <a href="shop-2.html" class="btn">Explore Shop</a>
+  </section>
+
+  <main>
+    <!-- WHY NEXUSSECURE -->
+    <section class="section" id="why">
+      <div class="section-header">
+        <h2 class="section-title">Why choose NexusSecure?</h2>
+        <p class="section-subtitle">
+          We translate complex security tests into simple, confident decisions for you.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bug-slash"></i>
+          </div>
+          <h3>Real-world threat emulation</h3>
+          <p>
+            Products are evaluated using realistic malware, ransomware and phishing attempts — not just lab benchmarks.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-gauge-high"></i>
+          </div>
+          <h3>Performance & impact tracking</h3>
+          <p>
+            We measure CPU, RAM and browsing slowdowns so you know which suite protects you without slowing you down.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <h3>Unbiased expert insights</h3>
+          <p>
+            We don’t sell licenses blindly — we break down pros, cons and ideal use-cases in plain language.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- POPULAR PRODUCTS (NORTON) -->
+    <section class="section" id="shop">
+      <div class="section-header">
+        <h2 class="section-title">Popular security suites</h2>
+        <p class="section-subtitle">
+          Hand-picked options for home users, freelancers and small businesses.
+        </p>
+        <a href="norton.html" class="section-link">View all products →</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p9 -->
+        <article class="product" data-id="p9" data-title="Norton 360 Premium For 10 Devices" data-price="99.99" data-image="images/n1.webp">
+          <a class="product-link" href="product-n1.html" title="Norton 360 Premium">
+            <div class="thumb"><img src="images/n1.webp" alt="Norton 360 Premium"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Premium For 10 Devices</div>
+            <div class="prod-price"><span class="new">$99.99</span></div>
+            <button class="btn-add" data-id="p9" data-price="99.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p10 -->
+        <article class="product" data-id="p10" data-title="Norton 360 Standard — 1 Device" data-price="64.99" data-image="images/n2.webp">
+          <a class="product-link" href="product-n2.html" title="Norton 360 Standard">
+            <div class="thumb"><img src="images/n2.webp" alt="Norton Standard"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Standard — 1 Device</div>
+            <div class="prod-price"><span class="new">$64.99</span></div>
+            <button class="btn-add" data-id="p10" data-price="64.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p11 -->
+        <article class="product" data-id="p11" data-title="Norton 360 Deluxe — 3 Devices" data-price="79.99" data-image="images/n3.webp">
+          <a class="product-link" href="product-n3.html" title="Norton Deluxe">
+            <div class="thumb"><img src="images/n3.webp" alt="Norton Deluxe"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Deluxe — 3 Devices</div>
+            <div class="prod-price"><span class="new">$79.99</span></div>
+            <button class="btn-add" data-id="p11" data-price="79.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p12 -->
+        <article class="product" data-id="p12" data-title="Norton 360 Deluxe - 5 devices" data-price="89.99" data-image="images/n4.webp">
+          <a class="product-link" href="product-n4.html" title="Norton 5 devices">
+            <div class="thumb"><img src="images/n4.webp" alt="Norton 5 devices"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Deluxe - 5 devices</div>
+            <div class="prod-price"><span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p12" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TREND MICRO SECTION -->
+    <section class="product-section">
+      <div class="section-header">
+        <h2>TREND MICRO</h2>
+        <a class="view-all" href="shop-2.html">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p5 -->
+        <article class="product" data-id="p5" data-title="Trend Micro Internet Security 3 Devices 1 Year" data-price="49.99" data-image="images/t1.webp">
+          <a class="product-link" href="product-t1.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="images/t1.webp" alt="Trend Micro Internet"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security 3 Devices 1 Year</div>
+            <div class="prod-price"><span class="old">$59.99</span> <span class="new">$49.99</span></div>
+            <button class="btn-add" data-id="p5" data-price="49.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p6 -->
+        <article class="product" data-id="p6" data-title="Trend Micro Internet Security 3 User, 1 Year" data-price="89.99" data-image="images/t2.webp">
+          <a class="product-link" href="product-t2.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="images/t2.webp" alt="Trend Micro Internet"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security 3 User, 1 Year</div>
+            <div class="prod-price"><span class="old">$99.99</span> <span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p6" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p7 -->
+        <article class="product" data-id="p7" data-title="Trend Micro Maximum Security 3 Devices 1 Year" data-price="99.99" data-image="images/t3.webp">
+          <a class="product-link" href="product-t3.html" title="Trend Micro Maximum">
+            <div class="thumb"><img src="images/t3.webp" alt="Trend Micro Maximum"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Maximum Security 3 Devices 1 Year</div>
+            <div class="prod-price"><span class="old">$119.99</span> <span class="new">$99.99</span></div>
+            <button class="btn-add" data-id="p7" data-price="99.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p8 -->
+        <article class="product" data-id="p8" data-title="Trend Micro Internet Security" data-price="89.99" data-image="images/t4.webp">
+          <a class="product-link" href="product-t4.html" title="Trend Micro Internet Security">
+            <div class="thumb"><img src="images/t4.webp" alt="Trend Micro Internet Security"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security</div>
+            <div class="prod-price"><span class="old">$109.99</span> <span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p8" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+<section class="ns-benefits">
+  <div class="ns-benefits-header">
+    <h2>Why shop with NexusSecure?</h2>
+    <p>Genuine licenses, fast delivery and support that actually helps you set things up.</p>
+  </div>
+
+  <div class="ns-benefits-grid">
+    <div class="ns-benefit-card">
+      <div class="ns-benefit-icon">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <div class="ns-benefit-title">Instant license delivery</div>
+      <div class="ns-benefit-text">
+        Get your activation key in minutes on your registered email after successful payment.
+      </div>
+    </div>
+
+    <div class="ns-benefit-card">
+      <div class="ns-benefit-icon">
+        <i class="fas fa-shield-check"></i>
+      </div>
+      <div class="ns-benefit-title">100% genuine products</div>
+      <div class="ns-benefit-text">
+        We only sell original, verifiable licenses for leading security brands.
+      </div>
+    </div>
+
+    <div class="ns-benefit-card">
+      <div class="ns-benefit-icon">
+        <i class="fas fa-headset"></i>
+      </div>
+      <div class="ns-benefit-title">Human support</div>
+      <div class="ns-benefit-text">
+        Stuck in installation? Our team can guide you step-by-step over chat or call.
+      </div>
+    </div>
+
+    <div class="ns-benefit-card">
+      <div class="ns-benefit-icon">
+        <i class="fas fa-lock"></i>
+      </div>
+      <div class="ns-benefit-title">Secure checkout</div>
+      <div class="ns-benefit-text">
+        Encrypted payments with trusted gateways to keep your transaction safe.
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+      <div class="section-header">
+        <h2 class="section-title">How NexusSecure helps you decide</h2>
+        <p class="section-subtitle">
+          A simple path from confusion to clarity in just a few minutes.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <div class="step-badge">1</div>
+          <h3>Tell us your needs</h3>
+          <p>
+            Browse the shop by use-case or contact us if you’re unsure — gaming, work, family, or business.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-badge">2</div>
+          <h3>Review tested options</h3>
+          <p>
+            Each product page explains protection level, performance impact and ideal user profile in detail.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-badge">3</div>
+          <h3>Purchase & get instant delivery</h3>
+          <p>
+            Secure checkout, instant license delivery to your email and clear setup instructions to get started.
+          </p>
+        </article>
+      </div>
+    </section>
+
+   
+    <!-- FINAL CTA -->
+    <section class="cta-strip">
+      <div>
+        <h2>Ready to secure your digital life?</h2>
+        <p>
+          Explore curated security products, or reach out if you want a human to help you pick the right one.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a href="Shop.html" class="btn">
+          Go to Shop <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="Contact.html" class="btn-ghost-dark">
+          Talk to our team
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>NexusSecure</h3>
+       
+        <p>Email Us: info@NexusSecure.shop</p>
+        <p>
+          NexusSecure delivers battle-tested analysis of antivirus, VPN, and endpoint protection solutions.
+          Our insights are powered by rigorous real-world threat emulation, performance benchmarks, and unbiased expert evaluation —
+          giving you clarity to protect your digital world with confidence.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index-2.html">Home</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Our Policies</h3>
+        <ul>
+          <li><a href="Terms.html">Terms & Conditions</a></li>
+          <li><a href="Refund.html">Refund & Return Policy</a></li>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="Shopping.html">Shopping Policy</a></li>
+          <li><a href="Payment.html">Payment Policy</a></li>
+          <li><a href="Cookie.html">Cookie Policy</a></li>
+          <li><a href="Shipping.html">Shipping/Delivery Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NexusSecure. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SMALL JS FOR MOBILE MENU -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+  <script>
+   
+
+    // --- CART LOGIC (localStorage) ---
+    function getCart() {
+      try { return JSON.parse(localStorage.getItem('NexusSecure_cart') || '[]'); } catch(e){ return []; }
+    }
+    function saveCart(cart) {
+      localStorage.setItem('NexusSecure_cart', JSON.stringify(cart));
+      updateCartAmount();
+    }
+    function updateCartAmount() {
+      const cart = getCart();
+      const total = cart.reduce((s,i) => s + (Number(i.price) * Number(i.qty)), 0);
+      const el = document.getElementById('cartAmount');
+      if(el) el.textContent = '$' + total.toFixed(2);
+    }
+
+    // initialize
+    updateCartAmount();
+
+    // helper - product data
+    function getProductDataFromArticle(el) {
+      if(!el) return null;
+      const id = el.getAttribute('data-id') || ('p_' + Date.now());
+      const title = el.getAttribute('data-title') || (el.querySelector('.prod-title') && el.querySelector('.prod-title').textContent.trim()) || 'Product';
+      let price = el.getAttribute('data-price') || '';
+      if(!price) {
+        // try read from .prod-price .new text
+        const priceText = el.querySelector('.prod-price .new')?.textContent || '';
+        price = priceText.replace(/[^0-9.-]+/g,'') || '0';
+      }
+      const image = el.getAttribute('data-image') || (el.querySelector('.thumb img') && el.querySelector('.thumb img').getAttribute('src')) || '';
+      return { id, title, price: Number(price), image };
+    }
+
+    // add-to-cart click handlers
+    document.querySelectorAll('.btn-add').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const article = btn.closest('.product');
+        const pdata = getProductDataFromArticle(article);
+        if(!pdata) return;
+        const cart = getCart();
+        const idx = cart.findIndex(i => i.id === pdata.id);
+        if(idx > -1) {
+          cart[idx].qty = Number(cart[idx].qty) + 1;
+        } else {
+          cart.push({ id: pdata.id, title: pdata.title, price: Number(pdata.price), image: pdata.image, qty: 1 });
+        }
+        saveCart(cart);
+        // redirect to cart page
+        window.location.href = 'Cart.html';
+      });
+    });
+
+    // make product articles keyboard accessible
+    document.querySelectorAll('.product').forEach(prod => {
+      prod.setAttribute('tabindex','0');
+      prod.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') {
+          const link = prod.querySelector('a.product-link');
+          if(link) link.click();
+        }
+      });
+    });
+</script>
+</body>
+
+<!-- Mirrored from nexussecure.shop/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Feb 2026 06:38:37 GMT -->
+</html>
